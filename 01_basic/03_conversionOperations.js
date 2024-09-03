@@ -45,4 +45,40 @@ let someNumber = 123;
 
 let stringNumber = String(someNumber);
 
-console.log(typeof stringNumber);
+// console.log(typeof stringNumber);
+
+
+// ***********************Operations****************
+
+let value = 10
+// console.log(value)
+let negValue = -value
+// console.log(negValue)
+
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(2**3);
+// console.log(2/3);
+// console.log(3%2);
+
+let name1 = "Hello"
+let name2 = " Nabeel"
+// console.log(name1 + name2);
+
+// console.log(1 + "2")
+// console.log("1" + 2)
+// console.log("1" + 2 + 2)
+// console.log(1 + 2 + "2")
+
+// console.log(3 + 4 * 2 % 4);
+
+// console.log(+true);
+// console.log(+"5")
+// console.log(typeof(+"5"))
+// console.log(+"Nabeel")
+
+let incValue = 10;
+let increment = incValue++;
+// console.log(increment); 

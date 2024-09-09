@@ -63,4 +63,5 @@ const num2 = 200;
 
 const num3 = 300;
 
-console.log(Array.of(num1, num2, num3)); //Output: [ 100, 200, 300 ] (Create & return Array of multiple elements) 
+// console.log(Array.of(num1, num2, num3)); //Output: [ 100, 200, 300 ] (Create & return Array of multiple elements)
+

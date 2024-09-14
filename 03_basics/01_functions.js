@@ -87,4 +87,14 @@ loginUSerMessage('Nabeel'); //nothing would be print unless value saved in a var
 
 // loginUSerMessage3(); //Output: "please define a username", due to if condition was true because no arguement was given 
 
+const objectFunction = {
+    name : 'Nabeel',
+    social : 'facebook'
+}
+
+function functonwithObjectPara(anyObject) {
+    return `${anyObject.name} is loggein into ${anyObject.social}`
+}
+
+console.log(functonwithObjectPara(objectFunction))
 

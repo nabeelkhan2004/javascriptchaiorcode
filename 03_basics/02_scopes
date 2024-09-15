@@ -3,10 +3,110 @@ let a = 300 //Global Scope variable
 if (true) {
     let a = 10 //Local Scope variable (if declared)
     const b = 20
-    console.log(a)
+    // console.log("INNER:", a)
+
 }
 
 
-console.log(a) //ReferenceError: a is not defined
+
+// console.log(a) //ReferenceError: a is not defined
 // console.log(b) //ReferenceError: b is not defined
 // console.log(c) // 30
+
+
+function one() {
+    const username = "nabeel"
+
+    function two(){
+        const website = "Youtube"
+        console.log(username);
+    }
+    // console.log(website);
+
+    two()
+
+}
+
+// one()
+
+if (true) {
+    const username = "nabeel"
+    if (username === "nabeel") {
+        const website = " youtube"
+        // console.log(username + website)
+    }
+    // console.log(website)
+}
+
+// console.log(username)
+
+
+// +++++++++++++++Interesting++++++++
+
+
+//+++++++++++Variables Declaration++++++++++++++
+
+//var is function-scoped and allows re-declaration and hoisting, but can lead to unexpected behavior due to its scope. 
+
+var globalScopeVar = 300
+
+function varFunc () {
+    // console.log(`before declaration: ${blockScopedVar}` ) //before declaration: undefined (it will not show any error but value would be undefined)
+    var blockScopedVar = 10
+    // console.log(`inside function ${blockScopedVar}`) //return inside function 10
+    var globalScopeVar = 150
+    // console.log(`outside function ${outsideFunctionvar}`) //outside function 150
+}
+
+varFunc()
+
+// console.log(`outside function ${blockScopedVar}`) //hellofunction is not defined
+
+// console.log(`outside function ${globalScopeVar}`) //outside function 300
+
+
+//let is block-scoped, allows reassignment, and prevents re-declaration within the same scope, making it safer than var.
+
+let globalScopeLet = 5
+
+function letFunc () {
+    // console.log(`before declaration: ${blockScopeLet}` ) //ReferenceError: Cannot access 'blockScopeLet' before initialization
+    let blockScopeLet = 10
+    // console.log(`inside function ${blockScopeLet}`) //return inside function 10
+    let globalScopeLet = 10
+    // console.log(`inside funtion: ${globalScopeLet}`) //outside function 10 (if not re-decleared inside function)
+    
+}
+
+// console.log(`outside function: ${globalScopeLet}`) //outside function 150
+letFunc()
+
+
+//const is block-scoped, cannot be reassigned or redeclared, but allows modifications to objects or arrays it references.
+const globalScopeConst = 5
+
+function constFunc () {
+    // console.log(`before declaration: ${blockScopeConst}` ) //ReferenceError: Cannot access 'blockScopeLet' before initialization
+    let blockScopeConst = 10
+    // console.log(`inside function ${blockScopeConst}`) //return inside function 10
+    let globalScopeConst = 10
+    // console.log(`inside funtion: ${globalScopeConst}`) //outside function 10 (const cannot be re-decleared)
+    
+}
+
+// console.log(`outside function: ${globalScopeConst}`) //outside function 150
+constFunc()
+
+//A function expression is a way to define a function and assign it to a variable, where the function can be anonymous and is not executed until called.
+
+// console.log(addOne(5)) //6
+
+function addOne (num) {
+    return num + 1
+}
+
+// console.log(addTwo(5)) //ReferenceError: Cannot access 'addTwo' before initialization
+
+const addTwo = function (num) {
+    return num + 1
+}

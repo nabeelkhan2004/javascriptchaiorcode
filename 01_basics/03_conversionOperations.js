@@ -31,6 +31,7 @@ let isBooleanLoggedIn = Boolean(isLoggedIn);
 //conversion of data type in to boolean by using "Boolean" method.
 
 // 0 
+// 0n
 // -0
 // null
 // undefined

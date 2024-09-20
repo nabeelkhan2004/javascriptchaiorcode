@@ -1,6 +1,6 @@
 const coding = ['js', 'ruby', 'java', 'python', 'cpp']
 
-coding.forEach((val) => val ) //forEach() is a method that executes a provided function once for each array element, allowing easy iteration without returning a new array.
+coding.forEach((val) => val ) //forEach() is a Mutative method & that executes a provided function once for each array element, allowing easy iteration without returning a new array.
 
 // console.log(coding) //[ 'js', 'ruby', 'java', 'python', 'cpp' ]
 

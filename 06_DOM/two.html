@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM | Hitesh Chaudhry</title>
 </head>
-<body>
+<body style="background-color: #212121; color: #fff;">
     <div class="parent">
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wednesday</div>
         <div class="day">Thursday</div>
     </div>
+    <script>
+        const parent = document.querySelector('.parent')
+        // console.log(parent); //<div class="parent">
+        // console.log(parent.children); //HTMLCollection(4)[div.day, div.day, div.day, div.day, ]
+        // console.log(parent.children[1]); //<div class="day">Tuesday</div>
+        // console.log(parent.children[1]); //<div class="day">Tuesday</div>
+        // console.log(parent.children[1].innerHTML); //Tuesday
+
+        for (let i = 0; i < parent.children.length; i++) {
+            console.log(parent.children[i].innerHTML)
+            
+        }
+    </script>
     
 </body>
 </html>

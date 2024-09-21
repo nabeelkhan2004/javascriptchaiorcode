@@ -7,6 +7,7 @@
 </head>
 <body style="background-color: #212121; color: #fff;">
     <div class="parent">
+        <!--This is a comment-->
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wednesday</div>
@@ -20,10 +21,33 @@
         // console.log(parent.children[1]); //<div class="day">Tuesday</div>
         // console.log(parent.children[1].innerHTML); //Tuesday
 
-        for (let i = 0; i < parent.children.length; i++) {
-            console.log(parent.children[i].innerHTML)
-            
-        }
+        //Looping HTMLCollection
+        /*
+        HTMLCollection is an array-like, live-updating object representing
+        a collection of HTML elements, returned by methods like getElementsByTagName(),
+        getElementsByClassName(), or the children property, where elements can be 
+        accessed via index or loops but lack certain array methods (e.g., forEach()).
+        
+        The classic for loop can be used to iterate over any object or array.
+        */
+
+        // for (let i = 0; i < parent.children.length; i++) {
+        //     console.log(parent.children[i].innerHTML)
+        //     //Monday
+            //Tuesday
+            //Wednesday
+            //Thursday
+        // }
+        // parent.children[1].style.color = "Orange"
+        // console.log(parent.firstElementChild); //target first child element = <div class="day">Monday</div> 
+        // console.log(parent.lastElementChild); //target last child element = //<div class="day">Thursday</div>
+        // const dayOne = document.querySelector('.day')
+        // console.log(dayOne); //target first element of class "day" HTMLCollection <div class="day">Monday</div>
+        
+        // console.log(dayOne.parentElement)  //target parent Element = <div class="parent">
+        // console.log(dayOne.nextElementSibling)  //target next sibling Element = <div class="day" style="color: orange;">Tuesday</div>
+        
+        console.log("nodes :", parent.childNodes) //List all the childs or element including trash Elements like #text
     </script>
     
 </body>

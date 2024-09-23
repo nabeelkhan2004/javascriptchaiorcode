@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Hitesh CHaudhry</title>
+</head>
+<body style="background-color: #212121; color: #fff;"> 
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    const addLang = (langName) => {
+        const li = document.createElement("li")
+        li.innerText = `${langName}`
+        const ul = document.querySelector(".language").appendChild(li)
+    }
+    addLang("Python")
+    addLang("TypeScript")
+    
+    //Optimize Code 
+    const addOpyimLang = (langName) => {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        const ul = document.querySelector(".language").appendChild(li)
+    }
+    addOpyimLang("golang")
+
+    //Edit
+    // const editValue = document.querySelector('li:nth-child(2)') //Select element
+    // const  addText =  document.createElement("li") //create Element
+    // addText.textContent = "Ruby" 
+    // editValue.replaceWith(addText)
+    
+    //Another Edit
+    const firstLang = document.querySelector('li:first-child') //Select element
+    firstLang.outerHTML = "<li>TypeScript</li>"
+
+    //remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+
+</script>
+</html>
